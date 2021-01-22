@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration
+	packages="com.yourcompany.yourcustomappenderpackage">
+	<Appenders>
+		<Console name="stdout" />
+		<MyCustomAppender name="ABC" />
+	</Appenders>
+	<Loggers>
+		<Root>
+			<AppenderRef ref="ABC" />
+			<AppenderRef ref="stdout" />
+		</Root>
+		<Logger name="com.log.TestCustomAppender">
+			<AppenderRef ref="ABC" />
+			<AppenderRef ref="stdout" />
+		</Logger>
+	</Loggers>
+</Configuration>
